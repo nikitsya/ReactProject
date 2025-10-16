@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Goals</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+        html {
+            background: #252525;
+        }
+
+        #dataTable {
+            width:90%;
+            margin-left:auto;
+            margin-right:auto;
+            border-collapse:collapse;
+        }
+
+        #dataTable th {
+            text-align: left;
+            background-color: #1b324a;
+            color:#fff;
+        }
+
+        #dataTable th:first-of-type {
+            border-top-left-radius:10px;
+        }
+
+        #dataTable th:last-of-type {
+            border-top-right-radius:10px;
+        }
+
+        #dataTable th,
+        #dataTable td {
+            padding:5px;
+        }
+
+        #dataTable tbody {
+            border:thin solid #000000;
+        }
+
+        #dataTable tbody tr:nth-child(odd) {
+            background-color: #43688e;
+        }
+
+        #dataTable tbody tr:nth-child(even) {
+            background-color: #5e8fbf;
+        }
+    </style>
+
+    <script type="text/babel">
+        "use strict"
+
+        class DataForm extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    data: [],
+                }
+            }
+
+            componentDidMount() {
+                let url = "json/data.json"
+                fetch(url)
+                    .then(response => response.json())
+                    .then(jsonData => { this.setState({data:jsonData}) })
+            }
+
+            render() {
+                console.log(this.state.data)
+                return (
+                    <div id="dataDiv">
+                        <DataTable data={this.state.data}/>
+                    </div>
+                )
+            }
+        }
+
+        class DataTable extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    data: props.data,
+                }
+            }
+
+            static getDerivedStateFromProps(props, state) {
+                return(
+                    (state.data !== props.data?{data: props.data}:null)
+                )
+            }
+
+            render() {
+                const goal = this.state.data.goal;
+
+                if (!goal) {
+                    return <p style={{ textAlign: "center" }}>Loading data...</p>;
+                }
+
+                return (
+                    <div>
+                        <table id="dataTable">
+                            <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Description</th>
+                                <th>Examples</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {goal.targets.map((target) => ( <tr key={target.id}>
+                                <td>{target.number}</td>
+                                <td>{target.description}</td>
+                                <td>
+                                    {target.examples.map((ex, i) => (
+                                        <div key={i} style={{ marginBottom: "10px" }}>
+                                            <strong>{ex.title}</strong>
+                                            <p>{ex.description}</p>
+                                            {ex.images && ex.images.map((img, j) => (
+                                                <img
+                                                    key={j}
+                                                    src={img}
+                                                    alt={ex.title + " image " + (j + 1)}
+                                                    style={{ width: "120px", marginRight: "5px", borderRadius: "5px" }}
+                                                />
+                                            ))}
+                                        </div>
+                                    ))}
+                                </td>
+                            </tr> ))}
+                            </tbody>
+                        </table>
+                    </div>
+                );
+            }
+        }
+
+        class DropDownList extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    regions: props.regions,
+                }
+            }
+
+            static getDerivedStateFromProps(props, state) {
+                return(
+                    (state.regions !== props.regions?{regions: props.regions}:null)
+                )
+            }
+
+            render() {
+                return (
+                    <label>
+                        <select>
+                            {this.state.regions.map(region =>
+                                <option value={region}>{region}</option>
+                            )}
+                        </select>
+                    </label>
+                )
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/babel"> ReactDOM.render(<DataForm/>, document.getElementById("container")) </script>
+</body>
+
+</html>

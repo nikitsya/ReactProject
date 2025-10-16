@@ -1,0 +1,213 @@
+{
+  "goal": {
+    "number": 12,
+    "title": "Responsible Consumption and Production",
+    "description": "Ensure sustainable consumption and production patterns.",
+    "targets": [
+      {
+        "id": 1,
+        "number": "12.1",
+        "description": "Implement the 10-Year Framework of Programmes on Sustainable Consumption and Production, with all countries taking action, developed countries taking the lead.",
+        "examples": [
+          {
+            "title": "EU Circular Economy Action Plan",
+            "description": "The European Union adopted a Circular Economy Action Plan to promote recycling, sustainable product design, and reduced waste.",
+            "images": [
+              "https://ec.europa.eu/environment/circular-economy/images/ce-action-plan.png",
+              "https://www.unep.org/sites/default/files/styles/hero_image/public/2021-03/circular-economy.jpg"
+            ],
+            "tags": ["circular economy", "policy", "waste reduction", "EU"]
+          },
+          {
+            "title": "Japan’s 3R Initiative",
+            "description": "Japan promotes the Reduce, Reuse, Recycle (3R) Initiative to cut waste and optimize resource use.",
+            "images": [
+              "https://www.mofa.go.jp/policy/environment/warm/cop/pamph2005-2/img/3r_initiative.jpg",
+              "https://www.uncrd.or.jp/content/image/3R_forum_logo.png"
+            ],
+            "tags": ["3R", "waste reduction", "Japan", "policy"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "number": "12.2",
+        "description": "By 2030, achieve sustainable management and efficient use of natural resources.",
+        "examples": [
+          {
+            "title": "Sustainable Forestry in Finland",
+            "description": "Finland manages forests sustainably, balancing timber production with biodiversity conservation.",
+            "images": [
+              "https://www.wwf.fi/app/uploads/2021/09/forest_finland.jpg",
+              "https://images.unsplash.com/photo-forest-sustainable.jpg"
+            ],
+            "tags": ["forestry", "natural resources", "sustainability", "Finland"]
+          },
+          {
+            "title": "Water Efficiency in Singapore",
+            "description": "Singapore’s NEWater program recycles treated wastewater into drinking water, reducing reliance on imports.",
+            "images": [
+              "https://www.pub.gov.sg/images/newater.jpg",
+              "https://www.siww.com.sg/sites/default/files/newater-plant.jpg"
+            ],
+            "tags": ["water management", "technology", "Singapore", "resource efficiency"]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "number": "12.3",
+        "description": "By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains.",
+        "examples": [
+          {
+            "title": "Too Good To Go App",
+            "description": "This app connects consumers with restaurants and shops to purchase surplus food at reduced prices.",
+            "images": [
+              "https://cdn.toogoodtogo.com/images/app-screenshot.jpg",
+              "https://toogoodtogo.com/media/hero-image.jpg"
+            ],
+            "tags": ["food waste", "technology", "app", "consumer engagement"]
+          },
+          {
+            "title": "France’s Food Waste Law",
+            "description": "France banned supermarkets from throwing away unsold food, requiring them to donate it instead.",
+            "images": [
+              "https://www.france24.com/en/france-food-waste.jpg",
+              "https://cdn.theguardian.com/france-food-waste-law.jpg"
+            ],
+            "tags": ["policy", "food waste", "donation", "France"]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "number": "12.4",
+        "description": "By 2020, achieve environmentally sound management of chemicals and all wastes, and reduce their release to air, water, and soil.",
+        "examples": [
+          {
+            "title": "Basel Convention",
+            "description": "An international treaty designed to reduce hazardous waste movements between nations and ensure safe disposal.",
+            "images": [
+              "https://www.basel.int/portals/4/images/logo-basel.png",
+              "https://www.unep.org/sites/default/files/2021-04/hazardous-waste.jpg"
+            ],
+            "tags": ["international treaty", "hazardous waste", "policy"]
+          },
+          {
+            "title": "Sweden’s Chemical Tax",
+            "description": "Sweden introduced a tax on hazardous chemicals in electronics to encourage safer alternatives.",
+            "images": [
+              "https://www.government.se/chemical-tax.jpg",
+              "https://images.unsplash.com/photo-chemical-safety.jpg"
+            ],
+            "tags": ["chemicals", "tax policy", "Sweden", "electronics"]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "number": "12.5",
+        "description": "By 2030, substantially reduce waste generation through prevention, reduction, recycling, and reuse.",
+        "examples": [
+          {
+            "title": "San Francisco Zero Waste Program",
+            "description": "San Francisco has implemented strict recycling and composting laws to achieve zero waste.",
+            "images": [
+              "https://sf.gov/sites/default/files/zero-waste-program.jpg",
+              "https://sfenvironment.org/images/composting-bins.jpg"
+            ],
+            "tags": ["zero waste", "city program", "recycling", "composting"]
+          },
+          {
+            "title": "Plastic Bag Ban in Kenya",
+            "description": "Kenya introduced one of the world’s strictest bans on plastic bags, reducing plastic waste significantly.",
+            "images": [
+              "https://www.unep.org/sites/default/files/plastic-bag-ban-kenya.jpg",
+              "https://www.bbc.co.uk/kenya-ban-market.jpg"
+            ],
+            "tags": ["plastic ban", "policy", "Kenya", "waste reduction"]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "number": "12.6",
+        "description": "Encourage companies, especially large and transnational companies, to adopt sustainable practices and integrate sustainability information into their reporting cycle.",
+        "examples": [
+          {
+            "title": "Unilever Sustainable Living Plan",
+            "description": "Unilever integrates sustainability into its operations, reducing environmental impact and improving livelihoods.",
+            "images": [
+              "https://www.unilever.com/Images/sustainable-living-plan.jpg",
+              "https://www.unilever.com/Images/unilever-sustainability.jpg"
+            ],
+            "tags": ["corporate sustainability", "reporting", "Unilever", "supply chain"]
+          },
+          {
+            "title": "Patagonia’s Environmental Reporting",
+            "description": "Patagonia publishes transparent reports on its environmental footprint and sustainable supply chain practices.",
+            "images": [
+              "https://www.patagonia.com/images/environmental-report.jpg",
+              "https://patagonia.com/images/supply-chain.jpg"
+            ],
+            "tags": ["corporate sustainability", "reporting", "Patagonia", "transparency"]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "number": "12.7",
+        "description": "Promote public procurement practices that are sustainable, in accordance with national policies and priorities.",
+        "examples": [
+          {
+            "title": "Green Public Procurement in the EU",
+            "description": "The European Union promotes green public procurement guidelines to encourage sustainable purchasing by governments.",
+            "images": [
+              "https://ec.europa.eu/environment/gpp/images/gpp-logo.png",
+              "https://www.unep.org/sites/default/files/green-procurement.jpg"
+            ],
+            "tags": ["green procurement", "policy", "EU", "public sector"]
+          },
+          {
+            "title": "South Korea’s Green Purchasing Law",
+            "description": "South Korea mandates government agencies to prioritize eco-friendly products in procurement decisions.",
+            "images": [
+              "https://www.greenkorea.org/images/green-law.jpg",
+              "https://images.unsplash.com/photo-green-products.jpg"
+            ],
+            "tags": ["procurement", "law", "South Korea", "eco-products"]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "number": "12.8",
+        "description": "By 2030, ensure that people everywhere have the relevant information and awareness for sustainable development and lifestyles in harmony with nature.",
+        "examples": [
+          {
+            "title": "UN SDG Awareness Campaign",
+            "description": "The United Nations runs global campaigns to raise awareness of sustainable consumption and production.",
+            "images": [
+              "https://sdgs.un.org/sites/default/files/2020-09/sdg-awareness.jpg",
+              "https://www.un.org/sites/un2.un.org/files/sdg-poster.png"
+            ],
+            "tags": ["awareness", "campaign", "UN", "education"]
+          },
+          {
+            "title": "Educational Programs in Costa Rica",
+            "description": "Costa Rica integrates sustainability education into schools, teaching students about eco-friendly practices.",
+            "images": [
+              "https://www.mep.go.cr/images/sustainability-education.jpg",
+              "https://images.unsplash.com/photo-eco-education.jpg"
+            ],
+            "tags": ["education", "schools", "Costa Rica", "sustainability"]
+          }
+        ]
+      }
+    ],
+    "links": {
+      "official": "https://sdgs.un.org/goals/goal12",
+      "undp": "https://www.undp.org/sustainable-development-goals#responsible-consumption-and-production"
+    }
+  }
+}
