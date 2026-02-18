@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a090f8b-b26a-4636-9e49-139b4da94907" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX File" />
+        <option value="SCSS File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="34eFXy7IfMv91SDoCjdKV2VxsKU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "last_opened_file_path": "/Users/nikitsya/Library/CloudStorage/OneDrive-DundalkInstituteofTechnology/Course/Year 2/Semester 1/Full Stack Development/Project",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jsx" />
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/scss" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a090f8b-b26a-4636-9e49-139b4da94907" name="Changes" comment="" />
+      <created>1761566173658</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761566173658</updated>
+      <workItem from="1761566174737" duration="106000" />
+      <workItem from="1761824650622" duration="13160000" />
+      <workItem from="1761907740227" duration="3052000" />
+      <workItem from="1762173963173" duration="7814000" />
+      <workItem from="1762251073978" duration="23093000" />
+      <workItem from="1762423264996" duration="792000" />
+      <workItem from="1762425522523" duration="1070000" />
+      <workItem from="1762532129780" duration="48605000" />
+      <workItem from="1762861488642" duration="14981000" />
+      <workItem from="1762947518089" duration="1459000" />
+      <workItem from="1762985188419" duration="4192000" />
+      <workItem from="1763066743920" duration="5642000" />
+      <workItem from="1763117148754" duration="8692000" />
+      <workItem from="1763385053612" duration="2142000" />
+      <workItem from="1763455189818" duration="1102000" />
+      <workItem from="1763457085616" duration="870000" />
+      <workItem from="1763459616652" duration="611000" />
+      <workItem from="1763463480002" duration="616000" />
+      <workItem from="1771342048297" duration="608000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

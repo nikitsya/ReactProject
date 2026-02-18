@@ -1,180 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Goals</title>
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta http-equiv="Content-Language" content="en" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Goals</title>
+        <link rel="icon" type="image/png" href="img/icon.png">
 
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        html {
-            background: #252525;
-        }
+        <link rel="stylesheet" href="css/styles.css"/>
 
-        #dataTable {
-            width:90%;
-            margin-left:auto;
-            margin-right:auto;
-            border-collapse:collapse;
-        }
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
 
-        #dataTable th {
-            text-align: left;
-            background-color: #1b324a;
-            color:#fff;
-        }
+        <!-- My script-->
+        <script src="jsx/main-script.jsx" type="text/babel"></script>
 
-        #dataTable th:first-of-type {
-            border-top-left-radius:10px;
-        }
+        <!-- My style compiled from scss file -->
+        <link rel="stylesheet" href="css/my_style.css">
+    </head>
 
-        #dataTable th:last-of-type {
-            border-top-right-radius:10px;
-        }
+    <!-- Template: SB Admin by Start Bootstrap
+         Source: https://startbootstrap.com/template/sb-admin
+         Package: startbootstrap-sb-admin-gh-pages.zip -->
+    <body class="sb-nav-fixed sb-sidenav-toggled">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a id="nav_info" class="navbar-brand ps-3"></a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <div id="add_row" class="d-none d-md-inline-block"></div>
+            <div id="tags_manager" class="d-none d-md-inline-block"></div>
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div id="search"></div>
+            </form>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Navigation</div>
 
-        #dataTable th,
-        #dataTable td {
-            padding:5px;
-        }
+                            <a class="nav-link" href="#table-section">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Table
+                            </a>
 
-        #dataTable tbody {
-            border:thin solid #000000;
-        }
+                            <a class="nav-link" href="#filter-section">
+                                <div class="sb-nav-link-icon"><i class="fas fa-filter"></i></div>
+                                Filter
+                            </a>
 
-        #dataTable tbody tr:nth-child(odd) {
-            background-color: #43688e;
-        }
+                            <a class="nav-link" href="#search-section">
+                                <div class="sb-nav-link-icon"><i class="fas fa-search"></i></div>
+                                Search
+                            </a>
 
-        #dataTable tbody tr:nth-child(even) {
-            background-color: #5e8fbf;
-        }
-    </style>
+                            <button class="nav-link btn-link text-start" id="openAddRow">
+                                <div class="sb-nav-link-icon"><i class="fas fa-plus-circle"></i></div>
+                                Add Row
+                            </button>
 
-    <script type="text/babel">
-        "use strict"
-
-        class DataForm extends React.Component {
-            constructor(props) {
-                super(props)
-                this.state = {
-                    data: [],
-                }
-            }
-
-            componentDidMount() {
-                let url = "json/data.json"
-                fetch(url)
-                    .then(response => response.json())
-                    .then(jsonData => { this.setState({data:jsonData}) })
-            }
-
-            render() {
-                console.log(this.state.data)
-                return (
-                    <div id="dataDiv">
-                        <DataTable data={this.state.data}/>
+                            <button class="nav-link btn-link text-start" id="openTagsManager">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
+                                Tags Manager
+                            </button>
+                        </div>
                     </div>
-                )
-            }
-        }
-
-        class DataTable extends React.Component {
-            constructor(props) {
-                super(props)
-                this.state = {
-                    data: props.data,
-                }
-            }
-
-            static getDerivedStateFromProps(props, state) {
-                return(
-                    (state.data !== props.data?{data: props.data}:null)
-                )
-            }
-
-            render() {
-                const goal = this.state.data.goal;
-
-                if (!goal) {
-                    return <p style={{ textAlign: "center" }}>Loading data...</p>;
-                }
-
-                return (
-                    <div>
-                        <table id="dataTable">
-                            <thead>
-                            <tr>
-                                <th>Number</th>
-                                <th>Description</th>
-                                <th>Examples</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {goal.targets.map((target) => ( <tr key={target.id}>
-                                <td>{target.number}</td>
-                                <td>{target.description}</td>
-                                <td>
-                                    {target.examples.map((ex, i) => (
-                                        <div key={i} style={{ marginBottom: "10px" }}>
-                                            <strong>{ex.title}</strong>
-                                            <p>{ex.description}</p>
-                                            {ex.images && ex.images.map((img, j) => (
-                                                <img
-                                                    key={j}
-                                                    src={img}
-                                                    alt={ex.title + " image " + (j + 1)}
-                                                    style={{ width: "120px", marginRight: "5px", borderRadius: "5px" }}
-                                                />
-                                            ))}
-                                        </div>
-                                    ))}
-                                </td>
-                            </tr> ))}
-                            </tbody>
-                        </table>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <div id="goal_info"></div>
+                        <!-- FILTER -->
+                        <div class="card mb-4" id="filter-section">
+                            <div class="card-header">
+                                <i class="fas fa-filter me-1"></i> Filter
+                            </div>
+                            <div class="card-body">
+                                <div id="filter"></div>
+                            </div>
+                        </div>
+                        <!-- TABLE -->
+                        <div class="card mb-4" id="table-section">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i> Table
+                            </div>
+                            <div class="card-body">
+                                <div id="table-container"></div>
+                            </div>
+                        </div>
+                        <!-- SEARCH -->
+                        <div class="card mb-4" id="search-section">
+                            <div class="card-header">
+                                <i class="fas fa-search me-1"></i> Search
+                            </div>
+                            <div class="card-body">
+                                <div id="search_"></div>
+                            </div>
+                        </div>
                     </div>
-                );
-            }
-        }
+                </main>
+            </div>
+        </div>
+        <footer id="footer"></footer>
 
-        class DropDownList extends React.Component {
-            constructor(props) {
-                super(props);
-                this.state = {
-                    regions: props.regions,
-                }
-            }
+        <script src="js/scripts.js"></script>
+        <script type="text/babel">ReactDOM.render(<DataForm/>, document.getElementById("table-container"))</script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelectorAll('.sb-sidenav a[href^="#"]').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault()
+                        const target = document.querySelector(this.getAttribute('href'))
+                        if (target) {
+                            target.scrollIntoView({ behavior: "smooth", block: "start" })
+                        }
+                    })
+                })
 
-            static getDerivedStateFromProps(props, state) {
-                return(
-                    (state.regions !== props.regions?{regions: props.regions}:null)
-                )
-            }
+                const addRowButton = document.getElementById("openAddRow")
+                addRowButton.addEventListener("click", function() {
+                    const addBtn = document.querySelector("#add_row button")
+                    if (addBtn) addBtn.click()
+                })
 
-            render() {
-                return (
-                    <label>
-                        <select>
-                            {this.state.regions.map(region =>
-                                <option value={region}>{region}</option>
-                            )}
-                        </select>
-                    </label>
-                )
-            }
-        }
+                const tagsButton = document.getElementById("openTagsManager")
+                tagsButton.addEventListener("click", function() {
+                    const tagBtn = document.querySelector("#tags_manager button")
+                    if (tagBtn) tagBtn.click()
+                })
+            })
+        </script>
 
-    </script>
-</head>
-
-<body>
-    <div id="container"></div>
-    <script type="text/babel"> ReactDOM.render(<DataForm/>, document.getElementById("container")) </script>
-</body>
-
+    </body>
 </html>
